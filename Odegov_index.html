@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="us">
 <head>
 	<meta charset="utf-8">
@@ -87,7 +87,7 @@
 </head>
 <body>
 
-<h1>Продаем животных</h1>
+<h1>Раздаём животных из нашего питомника в добрые и тёплые руки!</h1>
 
 <div class="ui-widget">
 </div>
@@ -105,8 +105,8 @@
 Порода подходит для активных и спортивных людей, для охотника или путешественника она станет надежным спутником.</td>
 		</tr>
 		<tr> 
-			<td class="leftcol" valign="middle">25000 руб.</td>
-			<td valign="top"><button id="buystrat">Купить</button></td>
+			<td class="leftcol" valign="middle"></td>
+			<td valign="top"><button id="buystrat">Забрать</button></td>
 		</tr>
 	</table></div>
 	<h3>Кролик</h3>
@@ -121,8 +121,8 @@
 Приручить этих милых животных при желании очень просто, достаточно регулярно проявлять к ним внимание.</td>
 		</tr>
 		<tr> 
-			<td class="leftcol">10000 руб.</td>
-			<td valign="top"><button id="buytele">Купить</button></td>
+			<td class="leftcol"></td>
+			<td valign="top"><button id="buytele">Забрать</button></td>
 		</tr>
 	</table></div></div>
 	<h3>Кошка домашняя</h3>
@@ -136,8 +136,8 @@
 иногда выделяемой в особый вид (F. libyca).</td>
 		</tr>
 		<tr> 
-			<td class="leftcol">5000 руб.</td>
-			<td valign="top"><button id="buyjag">Купить</button></td>
+			<td class="leftcol"></td>
+			<td valign="top"><button id="buyjag">Забрать</button></td>
 		</tr>
 	</table></div></div>
 </div>
@@ -159,20 +159,15 @@
 			<option>10</option>
 		</select> </h4>
 		<h4><div id="slider"> </br> </h4>
-		<h4>Дата доставки <input type="text" id="datepicker" style = "ui-textfield"></br> </h4>
-		<h4>Город
-		<select name="town" id="town">
-			<option>Уфа</option>
-			<option>Стерлитамак</option>
-			<option selected="selected">Ишимбай</option>
-		</select> </br> </h4>
-		<h4>Адрес <input id="autocomplete"> </br> </h4>
-		<h4>Номер клубной карты <input id="card" type="text" style = "ui-textfield" title="Нет номера карты?"> </br> </h4>
-		<h4>Итоговая цена <input type="text" id = "result" style = "ui-textfield" readonly> </br> </h4>
+		<h4>Дата приезда<input type="text" id="datepicker" style = "ui-textfield"></br> </h4>
+		<h4>
+	
+		
+		
 	</fieldset>
   </form>
 </div>
-<div id="dialog-confirm" title="Оформить покупку?">
+<div id="dialog-confirm" title="Оформить">
     <fieldset>
 		<p>Вы обещаете, что действительно будете ухаживать и любить этих животных?</p>
 	</fieldset>
@@ -196,22 +191,22 @@ $( "#buystrat" ).button()
 		.click(function(event){
 			price = 25000;
 			$( "#result" ).val(86800);
-			$( "#tempname" ).val("Купить Джек рассел терьер");
-			$( "#dialog-form" ).dialog("option","title","Купить Джек рассел терьера");
+			$( "#tempname" ).val("Забрать Джек рассел терьер");
+			$( "#dialog-form" ).dialog("option","title","Забрать Джек рассел терьера");
 			$( "#dialog-form" ).dialog( "open" );
 		});
 $( "#buytele" ).button()
 		.click(function(){
 			price = 10000;
 			$( "#result" ).val(10000);
-			$( "#dialog-form" ).dialog("option","title","Купить кролика");
+			$( "#dialog-form" ).dialog("option","title","Забрать кролика");
 			$( "#dialog-form" ).dialog( "open" );
         });
 $( "#buyjag" ).button()
 		.click(function(){
 			price = 184000;
 			$( "#result" ).val(5000);
-			$( "#dialog-form" ).dialog("option","title","Купить кошку домашнюю");
+			$( "#dialog-form" ).dialog("option","title","Забрать кошку домашнюю");
 			$( "#dialog-form" ).dialog( "open" );
         });
 	$('#datepicker').datepicker({
@@ -275,7 +270,7 @@ $( "#buyjag" ).button()
 			width: 400,
 			modal: true,
 			buttons: {
-					"Купить питомца": function() {
+					"Забрать питомца": function() {
 						$( this ).dialog( "close" );
 							$( "#dialog-form" ).dialog( "close");
 							$( "#thankyou" ).dialog("open");
